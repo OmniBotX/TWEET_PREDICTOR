@@ -1,0 +1,31 @@
+tweet_predictor/
+│
+├── app/                        # FastAPI Backend
+│   ├── main.py                 # FastAPI app entry point
+│   ├── api/
+│   │   ├── __init__.py
+│   │   └── endpoints.py        # Your tweet prediction API endpoints
+│   ├── models/
+│   │   ├── __init__.py
+│   │   └── schema.py           # Pydantic models for tweet input/output
+│   ├── services/
+│   │   ├── __init__.py
+│   │   └── predictor.py        # Load and use your AI model here
+│   ├── core/
+│   │   ├── __init__.py
+│   │   └── config.py
+│   └── requirements.txt
+│
+├── frontend/                   # Streamlit Frontend
+│   ├── app.py                  # Main Streamlit app (Tweet Predictor UI)
+│   ├── components/
+│   │   └── __init__.py
+│   └── requirements.txt
+│
+├── ai_model/                   # AI Model Files / Training Code
+│   ├── model.pkl               # Trained ML model file for tweet prediction
+│   └── train_model.py
+│
+├── .gitignore
+├── README.md
+└── docker-compose.yml          # For containerization (optional)
